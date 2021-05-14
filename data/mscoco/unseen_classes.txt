@@ -1,0 +1,16 @@
+bicycle
+boat
+stop sign
+bird
+backpack
+frisbee
+snowboard
+surfboard
+cup
+fork
+spoon
+broccoli
+chair
+keyboard
+microwave
+vase

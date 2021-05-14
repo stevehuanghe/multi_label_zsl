@@ -1,0 +1,10 @@
+bus
+giraffe
+tennis racket
+bowl
+apple
+oven
+sink
+scissors
+hair drier
+toothbrush
