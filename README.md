@@ -1,6 +1,6 @@
 # Multi-label Zero-shot Classification 
 
-This is the official implementation of the paper "Multi-label Zero-shot Classification by Learning to Transfer from External Knowledge" (BMVC'20, oral).
+This is the official implementation of the paper ["Multi-label Zero-shot Classification by Learning to Transfer from External Knowledge"](https://arxiv.org/abs/2007.15610) (BMVC'20, oral).
 
 ## Rquirements
 
