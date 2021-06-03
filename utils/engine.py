@@ -24,8 +24,6 @@ from utils.graph_utils import load_graph, get_edges
 from utils.word_vectors import get_word_vectors
 from models.loss_func import TripletSigmoidRank
 
-from backup2.mlgcn import MLRGCNPOS
-
 
 class Engine(Experiment):
 
@@ -111,20 +109,7 @@ class Engine(Experiment):
         """
         logger = self.log_master.get_logger("setup")
         logger.info("Setting up model")
-        if self.args.loss == "bce":
-            self.criterion = nn.MultiLabelSoftMarginLoss()
-        else:
-            self.criterion = TripletSigmoidRank()
-        self.imgnet_loss = nn.MSELoss()
-
-        self.model = MLRGCNPOS(self.args.word_dim, self.args.d_dim, self.args.h_dim, self.args.backbone,
-                               self.args.fin_layers, self.args.fout_layers, self.args.frel_layers, self.args.t_max,
-                               self.args.gcn_layers, self.args.acti, self.args.use_attn,
-                               pos_layers=self.args.pos_layers, tune_pos=self.args.tune_pos,
-                               pos_fuse=self.args.pos_fuse,
-                               pos_bias=self.args.pos_bias)
-
-        self.model.to(self.device)
+        raise NotImplementedError(f"function setup_model() not implemented")
 
     def setup_optim(self):
         params = filter(lambda p: p.requires_grad, self.model.parameters())

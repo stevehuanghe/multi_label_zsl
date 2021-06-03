@@ -13,8 +13,7 @@ from pycocotools.coco import COCO
 class CocoDataset(data.Dataset):
     """COCO Custom Dataset compatible with torch.utils.data.DataLoader."""
 
-    def __init__(self, image_dir, anno_json, label_set=None, transform=None, n_val=0, mode="train",
-                 setting="inductive", return_filename=False, val_ids=None, val_cats=None):
+    def __init__(self, image_dir, anno_json, label_set=None, transform=None, n_val=0, mode="train", return_filename=False, val_ids=None, val_cats=None):
         """Set the path for images, captions and vocabulary wrapper.
 
         Args:
@@ -23,13 +22,11 @@ class CocoDataset(data.Dataset):
             label_set: list of labels, IDs or names.
             transform: image transformation function, callable.
         """
-        assert setting in ["inductive", "trans_image", "trans_all_image"]
         assert n_val >= 0
 
         self.coco = COCO(anno_json)
         self.image_dir = image_dir
         self.label_set = label_set
-        self.setting = setting
         self.return_filename = return_filename
         self.transform = transform
 
@@ -40,13 +37,6 @@ class CocoDataset(data.Dataset):
                 self.cat_ids = sorted(self.coco.getCatIds(catNms=label_set))
             else:
                 self.cat_ids = sorted(label_set)
-
-            # if setting == "inductive":
-            #     self.ids = self.get_img_ids_tight(catIds=self.cat_ids)
-            # elif setting == "trans_image":
-            #     self.ids = list(sorted(self.get_img_ids(catIds=self.cat_ids)))
-            # else:
-            #     self.ids = list(sorted(self.coco.imgs.keys()))
         else:
             self.cat_ids = sorted(self.coco.getCatIds())
 

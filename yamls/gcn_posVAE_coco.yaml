@@ -7,7 +7,7 @@ beta2: 0.999
 checkpoint: null
 coco_adj: ./data/mscoco/coco_adj.pkl
 coco_glove: ./data/mscoco/coco_glove_word2vec.pkl
-coco_root: /media/hehuang/Data/coco
+coco_root: ./data/mscoco
 coco_unseen: ./data/mscoco/unseen_classes.txt
 coco_seen_val: ./data/mscoco/seen_val_classes.txt
 config: null

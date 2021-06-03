@@ -7,7 +7,7 @@ beta2: 0.999
 checkpoint: null
 coco_adj: ./data/mscoco/coco_adj.pkl
 coco_glove: ./data/mscoco/coco_glove_word2vec.pkl
-coco_root: /media/hehuang/Data/coco
+coco_root: ./data/mscoco
 coco_unseen: ./data/mscoco/unseen_classes.txt
 coco_seen_val: ./data/mscoco/seen_val_classes.txt
 config: null
@@ -34,7 +34,7 @@ n_neg: 5
 n_val_class: 0
 n_val_img: 0
 n_worker: 3
-nuswide_root: /media/hehuang/Data/nus_wide
+nuswide_root: ./data/nus_wide
 optimizer: adam
 patience: 5
 pos_bias: true

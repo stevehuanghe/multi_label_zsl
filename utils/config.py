@@ -27,13 +27,12 @@ class ArgParser(object):
         # data
         parser.add_argument('--data', metavar='STR', default='coco',
                             help='use coco or nus_wide data')
+                            
         parser.add_argument('--coco_root', metavar='STR', default='/media/hehuang/Data/coco',
                             help='root directory of coco data')
         parser.add_argument('--coco_unseen', metavar='STR', default='./data/mscoco/unseen_classes.txt',
                             help='path for file that stores the names for unseen classes')
         parser.add_argument('--coco_glove', metavar='STR', default='./data/mscoco/coco_glove_word2vec.pkl',
-                            help='path for file that stores the glove embeddings for all classes')
-        parser.add_argument('--coco_adj', metavar='STR', default='./data/mscoco/coco_adj.pkl',
                             help='path for file that stores the glove embeddings for all classes')
 
         parser.add_argument('--nuswide_root', metavar='STR', default='/media/hehuang/Data/nus_wide',

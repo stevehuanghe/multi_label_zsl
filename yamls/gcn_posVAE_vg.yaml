@@ -7,7 +7,7 @@ beta2: 0.999
 checkpoint: null
 coco_adj: ./data/mscoco/coco_adj.pkl
 coco_glove: ./data/mscoco/coco_glove_word2vec.pkl
-coco_root: /media/hehuang/Data/coco
+coco_root: ./data/mscoco
 coco_unseen: ./data/mscoco/unseen_classes.txt
 coco_seen_val: ./data/mscoco/seen_val_classes.txt
 config: null
@@ -33,7 +33,7 @@ n_neg: 5
 n_val_class: 0
 n_val_img: 0
 n_worker: 3
-nuswide_root: /media/hehuang/Data/nus_wide
+nuswide_root: ./data/nus_wide
 optimizer: sgd
 patience: 5
 pos_bias: true
@@ -53,9 +53,9 @@ wup_pos: 0.5
 enc_layers: '256'
 dec_layers: '256'
 wVAE: 1.0
-vg_root: '/media/hehuang/Data/visual_genome'
-vg_anno: './data/visual_genome/objects.json'
-vg_unseen: './data/visual_genome/vg_unseen_classes2.txt'
+vg_root: ./data/visual_genome'
+vg_anno: ./data/visual_genome/objects.json
+vg_unseen: ./data/visual_genome/vg_unseen_classes2.txt
 vg_K: 100
 
 
